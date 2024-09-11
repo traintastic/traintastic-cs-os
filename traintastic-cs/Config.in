@@ -1,0 +1,3 @@
+source "$BR2_EXTERNAL_TRAINTASTIC_CS_PATH/package/traintastic/traintastic-client/Config.in"
+source "$BR2_EXTERNAL_TRAINTASTIC_CS_PATH/package/traintastic/traintastic-data/Config.in"
+source "$BR2_EXTERNAL_TRAINTASTIC_CS_PATH/package/traintastic/traintastic-server/Config.in"

@@ -1,0 +1,15 @@
+config BR2_PACKAGE_TRAINTASTIC_SERVER
+	bool "traintastic-server"
+	depends on BR2_PACKAGE_LUA_5_4
+	select BR2_PACKAGE_BOOST
+	select BR2_PACKAGE_BOOST_PROGRAM_OPTIONS
+	select BR2_PACKAGE_ZLIB
+	select BR2_PACKAGE_LIBARCHIVE
+	select BR2_PACKAGE_TRAINTASTIC_DATA
+	help
+	  Traintastic server application.
+
+	  https://traintastic.org
+
+comment "traintastic-server needs Lua 5.4"
+	depends on !BR2_PACKAGE_LUA_5_4

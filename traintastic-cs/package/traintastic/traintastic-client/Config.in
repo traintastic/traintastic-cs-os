@@ -1,0 +1,18 @@
+config BR2_PACKAGE_TRAINTASTIC_CLIENT
+	bool "traintastic-client"
+	depends on BR2_PACKAGE_QT5 || BR2_PACKAGE_QT6
+	select BR2_PACKAGE_QT5BASE_WIDGETS if BR_PACKAGE_QT5
+	select BR2_PACKAGE_QT5BASE_GIF if BR_PACKAGE_QT5
+	select BR2_PACKAGE_QT5BASE_JPEG if BR_PACKAGE_QT5
+	select BR2_PACKAGE_QT5BASE_PNG if BR_PACKAGE_QT5
+	select BR2_PACKAGE_QT5SVG if BR_PACKAGE_QT5
+	select BR2_PACKAGE_TRAINTASTIC_DATA
+	help
+	  Traintastic client application.
+
+	  https://traintastic.org
+
+comment "traintastic-client needs Qt5 or Qt6"
+	depends on BR2_INSTALL_LIBSTDCPP
+	depends on BR2_TOOLCHAIN_HAS_THREADS
+	depends on !BR2_PACKAGE_QT5 || !BR2_PACKAGE_QT6
